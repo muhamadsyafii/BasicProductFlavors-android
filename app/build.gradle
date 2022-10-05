@@ -5,16 +5,51 @@ plugins {
 
 android {
     namespace 'com.syafii.basicproductflavors'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.syafii.basicproductflavors"
         minSdk 21
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    flavorDimensions "ice_cream"
+    productFlavors {
+        VanillaFlavor {
+            applicationId "com.syafii.vanillaflavor"
+            dimension "ice_cream"
+            versionCode 1
+            versionName "1.0"
+        }
+        ChocolateFlavor {
+            applicationId "com.syafii.chocolateflavor"
+            dimension "ice_cream"
+            versionCode 1
+            versionName "1.0"
+        }
+    }
+
+    sourceSets {
+        VanillaFlavor {
+            res {
+                srcDirs 'src/VanillaFlavor/res'
+            }
+            java {
+                srcDirs 'src/VanillaFlavor/java'
+            }
+        }
+        ChocolateFlavor {
+            res {
+                srcDirs 'src/ChocolateFlavor/res'
+            }
+            java {
+                srcDirs 'src/ChocolateFlavor/java'
+            }
+        }
     }
 
     buildTypes {
@@ -30,11 +65,15 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
