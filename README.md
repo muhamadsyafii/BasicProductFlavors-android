@@ -8,6 +8,7 @@
 Here is complete article of Basic use of Android Product Flavors/build variants with instruction of this.
 https://developer.android.com/studio/build/build-variants
 
+### Screenshoot Apps ###
 <img src="https://github.com/muhamadsyafii/BasicProductFlavors-android/blob/main/sample/sample_apps_design.png" alt="Basic Product Flavors Android"/>
 
 ### Pre-requisites ###
